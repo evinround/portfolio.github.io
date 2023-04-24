@@ -1,0 +1,283 @@
+/* CSS BROWSER RESET - for more control over page styles accross multiple browsers ================= */
+html, body, main, h1, h2, h3, h4, h5, h6, p, blockquote, 
+a, button, em, img, strong, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, input, textarea, select,
+article, aside, footer, header, nav, section, time,
+::before, ::after {
+	box-sizing: border-box;
+	margin: 0; 
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	text-decoration: none;
+}
+/* HTML5 - Older browser support for new HTML5 tags =================== */
+article, aside, figcaption, figure, footer, header, menu, nav, section {
+	display: block;
+}
+/*Background Image & General layout Styles==================*/
+body {
+	content: "";
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;      
+  background: #000;/* <-----repeats a small pattern-imeage on the x and y axis */
+}
+header {
+  width: 600px;height: auto;
+  margin: 10px auto;
+}
+header li {
+  display: block; 
+  list-styles:none;
+  text-align:center;
+}
+header img{
+  width:68px;height:68px;
+  border-radius: 50%;/*<-------By setting the radius of each corner to 50%, the <img> tag inside the <header> will be styled as a circle */
+}
+/*--I know the palette is off.--*/
+
+h1{
+  text-align:center;
+  color:#EFE9F4;
+  font-family:'Share Tech Mono', monospace, arial, sans-serif; 
+  font-size:3rem;
+  font-weight: bold;
+  margin:0px auto;
+  letter-spacing:1px;
+  text-transform: uppercase;
+  transition: .05s;
+}
+
+/*--https://alvarotrigo.com/blog/css-text-animations/--*/
+
+.title-word {
+  animation: color-animation 4s linear infinite;
+}
+
+.title-word-1 {
+  --color-1: #52B6E0;
+  --color-2: #EFE9F4;
+  --color-3: #EE341B;
+}
+
+.title-word-2 {
+  --color-1: #EFE9F4;
+  --color-2: #52B6E0;
+  --color-3: #EE341B;
+}
+@keyframes color-animation {
+  0%    {color: var(--color-1)}
+  32%   {color: var(--color-1)}
+  33%   {color: var(--color-2)}
+  65%   {color: var(--color-2)}
+  66%   {color: var(--color-3)}
+  99%   {color: var(--color-3)}
+  100%  {color: var(--color-1)}
+}
+.header {
+  display: flex;
+  justify-content: flex-start;
+  margin: 70px 0 0 0;
+}
+
+/*<article> tag holding all out content together=========*/
+article{
+  width:85%;
+  max-width: 60rem;
+  margin:20px auto;
+  position: relative;
+  background: #000;
+  padding:30px;
+  align-content: center;
+  align-items: center;
+}
+
+.heroimg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height:auto;
+  width:85%;
+  align-items: center;
+}
+
+h2 {
+  text-align:center;
+  color:#52B6E0;
+  font-family: 'Share Tech Mono', arial, monospace, sans-serif; 
+  font-size:2.5rem;
+  margin:0px auto;
+  letter-spacing:-1px;
+  text-transform: uppercase;
+  text-shadow:5px 5px 0px rgba(0,0,0,0.3);
+}
+
+body {
+  font: 100%;
+  margin: 0;
+}
+
+.h2margin {
+  margin: 60px 0 0 0;
+}
+
+p {
+  color: #EFE9F4;
+  padding: 2px;
+  text-align: center;
+  font-size: 18px;
+  font-family: 'Darker Grotesque', arial, sans-serif;
+  max-width: 50rem;
+}
+
+.bio {
+  display: grid;
+  grid-template-columns:  repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 30px;
+  grid-row-gap: 0px;
+  margin: 30px 0px 0px 0px;
+}
+
+.heading2 {
+  margin: 50px 0 0 0;
+}
+
+.grid1 {
+  display: grid;
+  grid-template-columns:  repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 30px;
+  grid-row-gap: 0px;
+  margin: 20px 0px 0px 0px;
+}
+
+.skills {
+  color: #EFE9F4;
+  text-align: center;
+  margin: 30px 0 0 0;
+  font-size: 18px;
+  font-family: 'Darker Grotesque', arial, sans-serif;
+}
+
+.container{
+  margin: 30px 0 0 0;
+  display:flex;
+  justify-content:center;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 0rem;
+}
+
+/*-Worked off of the form in the last project as I was consistently failing when working off of web instructions. I'm not sure why this gave me so much trouble.-*/
+
+form#contactform .hlf-input {
+  display:flex;
+  justify-content:center;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 0rem;
+  margin: auto;
+}
+
+input {
+  flex: 0 0 50%;
+}
+input#email, textarea#comment{
+  box-sizing: border-box;
+}
+
+form#contactform input, form#contactform textarea{
+  margin: auto;
+  padding:5px;
+  width:100%;
+  display: block;
+  text-align:left;
+  border:none;
+  font-family: inherit;
+  border: none;
+  color: #3D2357;
+}
+
+#contactform input#fname{
+  width:35%;
+  align-content: center;
+  margin:0px auto;
+  border-radius: 10px 0px 0px 0px;
+}
+
+#contactform input#lname{
+  width:35%;
+  align-content: center;
+  margin:0px auto; 
+  border-radius: 0px 10px 0px 0px;
+}
+
+
+form#contactform input:hover, form#contactform textarea:hover{
+  background-color: #3D2357;
+  border: #EE341B;
+  border: 1px dotted;
+  color: #3D2357;
+}
+
+.comment {
+  height: 4rem;
+}
+
+button {
+  display: block;
+	width: 20%;
+	padding: 1rem;
+  margin: 60px auto;
+  border-radius: 20px 30px;
+  font-family: 'Give You Glory', arial, cursive;
+  background:#3D2357;
+  color: #EFE9F4;
+  transition: .5s;
+}
+
+button:hover {
+  background: #EFE9F4;
+  color: #EE341B;
+  border: .5px;
+  border-color: #52B6E0;
+  transform: scale(.9);
+}
+
+.smflex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0px;
+}
+
+.socialmediaimg {
+  width: 3%;
+  margin: 2px;
+  transition: .5s;
+}
+
+.socialmediaimg:hover {
+  transform: scale(1.3);
+}
+
+/*====<footer> & Copright Styles=====*/
+footer { 
+  text-align:center;
+  display:flex;
+  justify-content:center;
+}
+footer p{
+  font-size:1rem;
+  color:#EE341B;
+  text-align:center;
+}
+
